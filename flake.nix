@@ -22,95 +22,98 @@
         installPhase = ''
           mkdir -p $out/share/icons/WinXP/cursors
 
-          cp cursors/*.cur $out/share/icons/WinXP/cursors/
+          # Copy all cursor files (no extension)
+          cp -r cursors/* $out/share/icons/WinXP/cursors/
 
+          # Copy index.theme
           cp index.theme $out/share/icons/WinXP/
 
           cd $out/share/icons/WinXP/cursors
 
+          # Create symlinks for X11 standard names
           # Default pointer
-          ln -sf default_arrow.cur default
-          ln -sf default_arrow.cur left_ptr
-          ln -sf default_arrow.cur arrow
-          ln -sf default_arrow.cur top_left_arrow
+          ln -sf default_arrow default
+          ln -sf default_arrow left_ptr
+          ln -sf default_arrow arrow
+          ln -sf default_arrow top_left_arrow
 
           # Link/pointer (hand)
-          ln -sf default_link.cur pointer
-          ln -sf default_link.cur hand
-          ln -sf default_link.cur hand1
-          ln -sf default_link.cur hand2
-          ln -sf default_link.cur pointing_hand
+          ln -sf default_link pointer
+          ln -sf default_link hand
+          ln -sf default_link hand1
+          ln -sf default_link hand2
+          ln -sf default_link pointing_hand
 
           # Text/beam
-          ln -sf default_beam.cur text
-          ln -sf default_beam.cur xterm
-          ln -sf default_beam.cur ibeam
+          ln -sf default_beam text
+          ln -sf default_beam xterm
+          ln -sf default_beam ibeam
 
           # Busy/wait
-          ln -sf default_busy.cur wait
-          ln -sf default_wait.cur left_ptr_watch
-          ln -sf default_wait.cur half-busy
+          ln -sf default_busy wait
+          ln -sf default_wait left_ptr_watch
+          ln -sf default_wait half-busy
 
-          # Move
-          ln -sf default_move.cur move
-          ln -sf default_move.cur fleur
-          ln -sf default_move.cur size_all
-          ln -sf default_move.cur all-scroll
+          # Move - THIS IS THE IMPORTANT ONE for Super+mouse1
+          ln -sf default_link move
+          ln -sf default_link fleur
+          ln -sf default_link size_all
+          ln -sf default_link all-scroll
 
           # Cross/precision
-          ln -sf default_cross.cur cross
-          ln -sf default_cross.cur crosshair
-          ln -sf default_cross.cur tcross
+          ln -sf default_cross cross
+          ln -sf default_cross crosshair
+          ln -sf default_cross tcross
 
           # Not allowed
-          ln -sf default_no.cur not-allowed
-          ln -sf default_no.cur forbidden
-          ln -sf default_no.cur no-drop
-          ln -sf default_no.cur circle
+          ln -sf default_no not-allowed
+          ln -sf default_no forbidden
+          ln -sf default_no no-drop
+          ln -sf default_no circle
 
           # Help
-          ln -sf default_helpsel.cur help
-          ln -sf default_helpsel.cur question_arrow
-          ln -sf default_helpsel.cur whats_this
+          ln -sf default_helpsel help
+          ln -sf default_helpsel question_arrow
+          ln -sf default_helpsel whats_this
 
           # Pen/pencil
-          ln -sf default_pen.cur pencil
-          ln -sf default_pen.cur draft
+          ln -sf default_pen pencil
+          ln -sf default_pen draft
 
           # Person
-          ln -sf default_person.cur person
+          ln -sf default_person person
 
           # Pin
-          ln -sf default_pin.cur pin
+          ln -sf default_pin pin
 
           # Resize cursors
-          ln -sf default_size1.cur size_ver
-          ln -sf default_size1.cur v_double_arrow
-          ln -sf default_size1.cur sb_v_double_arrow
-          ln -sf default_size1.cur n-resize
-          ln -sf default_size1.cur s-resize
-          ln -sf default_size1.cur ns-resize
+          ln -sf default_size1 size_ver
+          ln -sf default_size1 v_double_arrow
+          ln -sf default_size1 sb_v_double_arrow
+          ln -sf default_size1 n-resize
+          ln -sf default_size1 s-resize
+          ln -sf default_size1 ns-resize
 
-          ln -sf default_size2.cur size_fdiag
-          ln -sf default_size2.cur fd_double_arrow
-          ln -sf default_size2.cur nw-resize
-          ln -sf default_size2.cur se-resize
-          ln -sf default_size2.cur nwse-resize
+          ln -sf default_size2 size_fdiag
+          ln -sf default_size2 fd_double_arrow
+          ln -sf default_size2 nw-resize
+          ln -sf default_size2 se-resize
+          ln -sf default_size2 nwse-resize
 
-          ln -sf default_size3.cur size_hor
-          ln -sf default_size3.cur h_double_arrow
-          ln -sf default_size3.cur sb_h_double_arrow
-          ln -sf default_size3.cur e-resize
-          ln -sf default_size3.cur w-resize
-          ln -sf default_size3.cur ew-resize
+          ln -sf default_size3 size_hor
+          ln -sf default_size3 h_double_arrow
+          ln -sf default_size3 sb_h_double_arrow
+          ln -sf default_size3 e-resize
+          ln -sf default_size3 w-resize
+          ln -sf default_size3 ew-resize
 
-          ln -sf default_size4.cur size_bdiag
-          ln -sf default_size4.cur bd_double_arrow
-          ln -sf default_size4.cur ne-resize
-          ln -sf default_size4.cur sw-resize
-          ln -sf default_size4.cur nesw-resize
+          ln -sf default_size4 size_bdiag
+          ln -sf default_size4 bd_double_arrow
+          ln -sf default_size4 ne-resize
+          ln -sf default_size4 sw-resize
+          ln -sf default_size4 nesw-resize
 
-          ln -sf default_up.cur up_arrow
+          ln -sf default_up up_arrow
         '';
 
         meta = {
