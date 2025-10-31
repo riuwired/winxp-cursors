@@ -4,7 +4,7 @@
   fetchzip,
 }: let
   themeName = "winxp-cursors";
-  themeSrc = fetchFromGitHub {
+  themeSrc = pkgs.fetchFromGitHub {
     owner = "riuwired";
     repo = "winxp-cursors";
     rev = "b77d7bc1a592c88200c646bd184d8bd8fc5a2e13";
