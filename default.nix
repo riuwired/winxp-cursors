@@ -1,5 +1,6 @@
 {
   stdenv,
+  pkgs,
   lib,
   fetchzip,
 }: let
