@@ -1,8 +1,3 @@
 [Icon Theme]
-Name=Windows XP
+Name=WinXP
 Comment=Windows XP Cursor Theme
-Inherits= winxp-cursors
-
-[Aliases]
-move = left_ptr
-fleur = left_ptr
