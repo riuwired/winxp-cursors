@@ -27,7 +27,6 @@ in
     meta = with lib; {
       description = "WinXP Cursor for linux";
       homepage = "https://github.com/riuwired/winxp-cursors";
-      license = licenses.unfree;
       platforms = platforms.linux;
     };
   }
