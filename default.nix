@@ -20,8 +20,8 @@ in
     dontBuild = true;
 
     installPhase = ''
-      mkdir -p $out/share/icons
-      cp -r ${themeName} $out/share/icons/${themeName}
+      mkdir -p $out/share/icons/${themeName}
+      cp -r $src/* $out/share/icons/${themeName}
     '';
 
     meta = with lib; {
